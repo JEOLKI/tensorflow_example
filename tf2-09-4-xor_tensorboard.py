@@ -16,7 +16,7 @@ tf.model.compile(loss='binary_crossentropy', optimizer=tf.optimizers.SGD(lr=0.1)
 tf.model.summary()
 
 # prepare callback
-log_dir = os.path.join("../../Downloads/DeepLearningZeroToAll-master/DeepLearningZeroToAll-master/tf2", "logs", "fit", datetime.datetime.now().strftime("%Y%m%d-%H%M%S"))
+log_dir = os.path.join("logs/fit/", datetime.datetime.now().strftime("%Y%m%d-%H%M%S"))
 tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
 
 # add callback param to fit()
