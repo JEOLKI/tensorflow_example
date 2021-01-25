@@ -2,6 +2,7 @@
 import tensorflow as tf
 import numpy as np
 
+# XOR 데이터
 x_data = np.array([[0, 0], [0, 1], [1, 0], [1, 1]], dtype=np.float32)
 y_data = np.array([[0], [1], [1], [0]], dtype=np.float32)
 
