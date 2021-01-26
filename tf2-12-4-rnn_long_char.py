@@ -12,7 +12,7 @@ data_dim = len(char_set)
 hidden_size = len(char_set)
 num_classes = len(char_set)
 sequence_length = 10  # Any arbitrary number
-learning_rate = 0.1
+learning_rate = 0.01
 
 dataX = []
 dataY = []

@@ -19,6 +19,7 @@ y_train = tf.keras.utils.to_categorical(y_train, nb_classes)
 y_test = tf.keras.utils.to_categorical(y_test, nb_classes)
 
 tf.model = tf.keras.Sequential()
+
 # Glorot normal initializer, also called Xavier normal initializer.
 # see https://www.tensorflow.org/api_docs/python/tf/initializers
 

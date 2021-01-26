@@ -19,9 +19,9 @@ y_train = tf.keras.utils.to_categorical(y_train, nb_classes)
 y_test = tf.keras.utils.to_categorical(y_test, nb_classes)
 
 tf.model = tf.keras.Sequential()
-tf.model.add(tf.keras.layers.Dense(input_dim=784, units=256, activation='relu'))
+tf.model.add(tf.keras.layers.Dense(input_dim=784, units=256, activation='relu')) #units의 개수는 상관없지만 아래와 맞춰야한다.
 tf.model.add(tf.keras.layers.Dense(units=256, activation='relu'))
-tf.model.add(tf.keras.layers.Dense(units=nb_classes, activation='softmax'))
+tf.model.add(tf.keras.layers.Dense(units=nb_classes, activation='softmax')) # 마지막은 10개로정해져 있다.
 tf.model.compile(loss='categorical_crossentropy',
                  optimizer=tf.keras.optimizers.Adam(lr=learning_rate), metrics=['accuracy'])
 tf.model.summary()

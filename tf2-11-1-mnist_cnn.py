@@ -8,7 +8,7 @@ mnist = tf.keras.datasets.mnist
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 x_test = x_test / 255
 x_train = x_train / 255
-x_train = x_train.reshape(x_train.shape[0], 28, 28, 1)
+x_train = x_train.reshape(x_train.shape[0], 28, 28, 1) # img 28x28x1
 x_test = x_test.reshape(x_test.shape[0], 28, 28, 1)
 
 # one hot encode y data
@@ -21,7 +21,7 @@ training_epochs = 12
 batch_size = 128
 
 tf.model = tf.keras.Sequential()
-# L1
+# L1 img 28x28x1 / filtersize kernelsize
 tf.model.add(tf.keras.layers.Conv2D(filters=16, kernel_size=(3, 3), input_shape=(28, 28, 1), activation='relu'))
 tf.model.add(tf.keras.layers.MaxPooling2D(pool_size=(2, 2)))
 

@@ -22,6 +22,7 @@ tf.model = tf.keras.Sequential()
 # Glorot normal initializer, also called Xavier normal initializer.
 # see https://www.tensorflow.org/api_docs/python/tf/initializers
 
+# 5단으로 늘리고 2배로 깊게 해보았다. Xavier도 사용
 tf.model.add(tf.keras.layers.Dense(input_dim=784, units=512, kernel_initializer='glorot_normal', activation='relu'))
 tf.model.add(tf.keras.layers.Dense(units=512, kernel_initializer='glorot_normal', activation='relu'))
 tf.model.add(tf.keras.layers.Dense(units=512, kernel_initializer='glorot_normal', activation='relu'))
